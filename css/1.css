@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+body {
+    background-color: #FFF0F5;
+    margin: 0;
+    color: #8B4513;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    background-color: #FFB6C1;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #8B4513;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF69B4;
+}
+
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #FFECF3;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.3);
+}
+
+h1, h2 {
+    font-family: 'Pacifico', cursive;
+    color: #FF69B4;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.foda {
+    text-align: left;
+    margin-top: 30px;
+}
+
+.foda h3 {
+    color: #FF69B4;
+    font-family: 'Pacifico', cursive;
+}
+
+.foda ul {
+    padding-left: 20px;
+}
+
+.footer {
+    background-color: #FFB6C1;
+    color: #8B4513;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.candy-icon {
+    display: inline-block;
+    width: 250px;
+    height: 200px;
+    margin: 0 5px;
+    vertical-align: middle;
+    background-image: url('../imgs/ft.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.candy-icon2 {
+        font-size: 2em;
+        margin: 0 5px;
+    
+
+}
