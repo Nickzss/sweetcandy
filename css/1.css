@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
 
 body {
-    background-color: #FFF0F5;
+    background-color: #e5e5f7;
+    opacity: 0.99;
+    background-image: linear-gradient(0deg, #e5e5f7 50%, #ff66b2 50%);
+    background-size: 23px 23px;
     margin: 0;
     color: #8B4513;
     text-align: center;
@@ -9,33 +12,71 @@ body {
 }
 
 header {
-    background-color: #FFB6C1;
+    background: linear-gradient(to right, #ff66b2, #ff99cc);
     padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+nav {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.candy-nav {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav ul li {
-    margin: 0 15px;
+.candy-nav li {
+    position: relative;
 }
 
-nav ul li a {
-    color: #8B4513;
+.candy-nav a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.2em;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-nav ul li a:hover {
-    color: #FF69B4;
+.candy-nav a::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
 }
+
+.candy-nav a:hover::before {
+    opacity: 1;
+    animation: sparkle 1s ease-in-out;
+}
+
+.candy-nav a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
 
 .content {
     max-width: 800px;
@@ -44,6 +85,17 @@ nav ul li a:hover {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(255, 182, 193, 0.3);
+}
+.video-container {
+    margin-top: 70px;
+    border: 5px solid #FF69B4;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.video-container video {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
 }
 
 h1, h2 {
@@ -61,46 +113,46 @@ h2 {
     margin-top: 30px;
 }
 
-p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.foda {
-    text-align: left;
-    margin-top: 30px;
-}
-
-.foda h3 {
-    color: #FF69B4;
-    font-family: 'Pacifico', cursive;
-}
-
-.foda ul {
-    padding-left: 20px;
-}
-
-.footer {
-    background-color: #FFB6C1;
-    color: #8B4513;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-.candy-icon {
-    display: inline-block;
-    width: 250px;
-    height: 200px;
-    margin: 0 5px;
-    vertical-align: middle;
-    background-image: url('../imgs/ft.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.candy-icon2 {
-        font-size: 2em;
-        margin: 0 5px;
+/* Responsive design */
+@media (max-width: 768px) {
+    .candy-nav {
+        flex-direction: column;
+        align-items: center;
+    }
     
+    .candy-nav a {
+        width: 200px;
+        text-align: center;
+    }
+}
+.candy-nav a {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
 
+.candy-nav a::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: calc(-100% - 80%);
+    border-bottom: 80px solid #ff1a75; 
+    border-right: 80px solid transparent;
+    transition: .4s ease-in-out all;
+}
+
+.candy-nav a:hover::after {
+    left: 0;
+}
+
+
+.candy-nav a {
+    color: white;
+    transition: color 0.4s ease-in-out;
+}
+
+.candy-nav a:hover {
+    color: white;
 }
