@@ -75,6 +75,21 @@ nav {
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     background: rgba(255, 255, 255, 0.3);
 }
+.candy-icon {
+    display: inline-block;
+    width: 250px;
+    height: 200px;
+    margin: 0 5px;
+    vertical-align: middle;
+    background-image: url('../imgs/ft.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.candy-icon2 {
+    font-size: 2em;
+    margin: 0 5px;
+}
 
 
 
